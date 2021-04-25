@@ -32,32 +32,23 @@ app = dash.Dash(__name__, external_stylesheets=stylesheet)
 PAGE_SIZE =22
 
 df = pd.read_pickle('covidproject.pkl')
+labels = [{'label' : state, 'value' : state} for state in set(df.Location)]
 
 app.layout = html.Div([
     html.H1('US Most Populous States Covid19 Cases and Vaccinations',style={'textAlign' : 'center'}),
     html.Br(),
 
     html.Div([html.H5("Multi-Dropdown: "),
-              dcc.Dropdown(options=[{'label': 'California', 'value': 'CA'},
-                           {'label': 'Texas', 'value': 'TX'},
-                           {'label': 'Florida', 'value': 'FL'},
-                           {'label': 'New York State', 'value': 'NY'},
-                           {'label': 'Pennsylvania', 'value': 'PA'},
-                           {'label': 'Illinois', 'value': 'IL'},
-                           {'label': 'Ohio', 'value': 'PA'},
-                           {'label': 'Georgia', 'value': 'GA'},
-                           {'label': 'North Carolina', 'value': 'NC'},
-                           {'label': 'Michigan', 'value': 'MI'},
-                           {'label': 'Massachusetts', 'value': 'MA'}],
+              dcc.Dropdown(options=labels,
                            id='states_multidropdown',
-                           value=['CA','MA'],
+                           value=['California','Massachusetts'],
                            multi=True),
               html.Br(),
               html.H5("Select Fields: "),
-              dcc.RadioItems(options=[{'label': 'New Cases', 'value': 'Nc'},
-                                      {'label': 'Vaccinations', 'value': 'Vc'}],
+              dcc.RadioItems(options=[{'label': 'New Cases', 'value': 'New Cases'},
+                                      {'label': 'Vaccinations', 'value': 'New Cases'}],
                              id='field-radioitems',
-                             value='Nc'),
+                             value='New Cases'),
               html.Br(),
               html.Br(),
               html.Br()],
@@ -105,8 +96,10 @@ def update_table(states_multidropdown):
     return dff.to_dict('records')
 
 
-server = app.server
+
 if __name__ == '__main__':
     app.run_server(debug=True)
     
+
+
 
