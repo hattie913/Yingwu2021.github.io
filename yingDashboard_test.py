@@ -2,16 +2,6 @@
 """
 Created on Thu Apr 22 17:30:28 2021
 
-@author: hatti
-"""
-
-"""
-Dashboard created in lecture Week 11
-"""
-
-"""
-Dash template
-"""
 
 import dash
 import dash_core_components as dcc
