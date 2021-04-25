@@ -41,7 +41,7 @@ app = dash.Dash(__name__, external_stylesheets=stylesheet)
 
 PAGE_SIZE =22
 
-df = pd.read_pickle('C:\\Users\\hatti\\Desktop\\ma705\\individual project\\covidproject.pkl')
+df = pd.read_pickle('covidproject.pkl')
 
 app.layout = html.Div([
     html.H1('US Most Populous States Covid19 Cases and Vaccinations',style={'textAlign' : 'center'}),
