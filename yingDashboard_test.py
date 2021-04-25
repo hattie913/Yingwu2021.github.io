@@ -115,7 +115,7 @@ def update_table(states_multidropdown):
     return dff.to_dict('records')
 
 
-
+server = app.server
 if __name__ == '__main__':
     app.run_server(debug=True)
     
