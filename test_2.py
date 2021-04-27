@@ -23,6 +23,7 @@ PAGE_SIZE =22
 
 df = pd.read_pickle('covidproject.pkl')
 statelabels = [{'label' : state, 'value' : state} for state in set(df.State)]
+yLabels = [{'label' : col, 'value' : col} for col in df.columns[2:6]]
 
 df['Date'] = pd.to_datetime(df.Date).dt.date
 '''
@@ -51,8 +52,7 @@ app.layout = html.Div([
                            multi=True),
               html.Br(),
               html.H5("Select Fields: "),
-              dcc.RadioItems(options=[{'label': 'New Case', 'value': 'New Case'},
-                                      {'label': 'Vaccinations', 'value': 'Daily Vaccinations'}],
+              dcc.RadioItems(options = yLabels,
                              id='field_radioitems',
                              value='New Case',
                              labelStyle={'display': 'inline-block'}),
@@ -95,19 +95,13 @@ app.layout = html.Div([
                             page_size=PAGE_SIZE,
                             page_action='native',  
                             sort_action='native',
-
-
                             sort_mode='multi',
-
                             sort_by=[]
                         )
             ],
-            
-            id='table_my',
+            #id='table_my',
         #style = {'width': '49%'}
         )
-
-  
   ])
 
 @app.callback(
