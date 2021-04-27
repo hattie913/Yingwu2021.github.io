@@ -16,23 +16,8 @@ from datetime import date,timedelta
 from calendar import monthrange
 
 
-stylesheet = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-
-# pandas dataframe to html table
-'''
-def generate_table(dataframe, max_rows=2000):
-    return html.Table([
-        html.Thead(
-            html.Tr([html.Th(col) for col in dataframe.columns])
-        ),
-        html.Tbody([
-            html.Tr([
-                html.Td(dataframe.iloc[i][col]) for col in dataframe.columns
-            ]) for i in range(min(len(dataframe), max_rows))
-        ])
-    ])
-'''
-app = dash.Dash(__name__, external_stylesheets=stylesheet)
+stylesheet = ['https://codepen.io/chriddyp/pen/bWLwgP.css'] 
+datableapp = dash.Dash(__name__, external_stylesheets=stylesheet)
 
 PAGE_SIZE =22
 
@@ -50,10 +35,9 @@ dateRange.append(nextMon)
 dates = sorted(dateRange)
 date_mark = {i : dates[i] for i in range(0,len(dates))}
 '''
-#numdate= [x for x in range(len(df['Date'].unique()))]
+
 cols = ['Date','State','New Case','New Death','Daily Vaccinations',
         'Daily Vaccinations/million']
-#df = df.set_index('Date', drop=True)
 
 #fig = px.scatter(df, x="Date", y='Daily Vaccinations', color='Location')
 app.layout = html.Div([
