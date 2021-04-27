@@ -5,21 +5,6 @@ Created on Mon Apr 26 21:55:34 2021
 @author: hatti
 """
 
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Apr 22 17:30:28 2021
-
-@author: hatti
-"""
-
-"""
-Dashboard created in lecture Week 11
-"""
-
-"""
-Dash template
-"""
-
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
