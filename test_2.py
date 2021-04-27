@@ -51,7 +51,7 @@ app = dash.Dash(__name__, external_stylesheets=stylesheet)
 
 PAGE_SIZE =22
 
-df = pd.read_pickle('C:\\Users\\hatti\\Desktop\\ma705\\individual project\\covidproject.pkl')
+df = pd.read_pickle('covidproject.pkl')
 statelabels = [{'label' : state, 'value' : state} for state in set(df.State)]
 
 df['Date'] = pd.to_datetime(df.Date).dt.date
