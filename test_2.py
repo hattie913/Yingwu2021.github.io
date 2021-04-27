@@ -40,16 +40,16 @@ df = pd.read_pickle('covidproject.pkl')
 statelabels = [{'label' : state, 'value' : state} for state in set(df.State)]
 
 df['Date'] = pd.to_datetime(df.Date).dt.date
+'''
 #get future one month later
 today = date.today()
 nextMd = date(today.year, today.month, monthrange(today.year, today.month)[1]) + timedelta(1)
 nextMon = nextMd.strftime('%Y-%m')
 dateRange = list(set([caseDT.strftime('%Y-%m')for caseDT in df.Date]))
 dateRange.append(nextMon)
-
 dates = sorted(dateRange)
-
 date_mark = {i : dates[i] for i in range(0,len(dates))}
+'''
 #numdate= [x for x in range(len(df['Date'].unique()))]
 cols = ['Date','State','New Case','New Death','Daily Vaccinations',
         'Daily Vaccinations/million']
