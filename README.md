@@ -29,7 +29,7 @@ The raw datasets above were first cleaned by dropping unnecessary rows of states
 -  "Total vaccinations": total number of doses administered. This is counted as a single dose, and may not equal the total number of people vaccinated, depending on the specific dose regime (e.g. people receive multiple doses). 
 
 \* Variable interpretation is based on the original interpretation of the raw dataset.
-For more detailed information, please refer to : https://github.com/owid/covid-19-data/edit/master/public/data/vaccinations/README.md 
+For more detailed information, please refer to: https://github.com/owid/covid-19-data/edit/master/public/data/vaccinations/README.md 
 
                              
                           
