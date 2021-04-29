@@ -167,7 +167,7 @@ def update_fig_table(states,field):
     return df2.to_dict('records'),fig
     
 
-   
+server = app.server
 
 if __name__ == '__main__':
     app.run_server(debug=True)
