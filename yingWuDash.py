@@ -110,7 +110,7 @@ app.layout = html.Div([
                              the vaccine started to deploy nationwide on 2021/1/12
                              - "Daily_vaccinations/million" indicates the number of new doses of vaccinations per million people in the total 
                              population of the state received each day 
-                             -  Primary data source: [CDC](https://covid.cdc.gov/covid-data-tracker/#cases_casesper100klast7days)
+                             - Primary data source: [CDC](https://covid.cdc.gov/covid-data-tracker/#cases_casesper100klast7days)
                              and [Our World in Data](https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations)
                              
                              &nbsp;
