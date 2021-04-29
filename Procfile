@@ -1,1 +1,1 @@
-web: yingWuDash:server
+web: gunicorn yingWuDash:server
