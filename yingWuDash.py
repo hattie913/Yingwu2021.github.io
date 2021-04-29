@@ -111,7 +111,7 @@ app.layout = html.Div([
                              - "Daily_vaccinations/million" indicates the number of new doses of vaccinations per million people in the total 
                              population of the state received each day 
                              - Primary data source: [CDC](https://covid.cdc.gov/covid-data-tracker/#cases_casesper100klast7days)
-                             and [Our World in Datahttps://github.com/owid/covid-19-data/tree/master/public/data/vaccinations)
+                             and [Our World in Data](https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations)
                              - References on customizing dashboard layout and CSS style:
                                      * https://dash.plotly.com/dash-html-components
                                      * https://www.w3schools.com/css/css_margin.asp
