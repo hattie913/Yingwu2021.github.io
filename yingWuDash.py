@@ -161,7 +161,7 @@ def update_fig_table(states,field):
     fig = px.scatter(df2, x='Date', y=field, color = 'State',template='ggplot2')
     fig.update_xaxes(showgrid=False)
     fig.update_traces(mode='lines+markers',marker=dict(size=5))
-    fig.update_layout(title="A Time Series Plot on Covid-19 and Vaccinations", 
+    fig.update_layout(title="A Time Series Plot on Covid-19 Cases and Vaccinations", 
                      font = dict(family="Arial, Helvetica, sans-serif",
         size=15),xaxis_rangeslider_visible=True)
     return df2.to_dict('records'),fig
