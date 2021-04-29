@@ -1,1 +1,1 @@
-web: yingDashboard_test:server
+web: yingWuDash:server
