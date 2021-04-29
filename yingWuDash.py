@@ -115,8 +115,9 @@ app.layout = html.Div([
                              - References on customizing dashboard layout and CSS style:
                                      * https://dash.plotly.com/dash-html-components
                                      * https://www.w3schools.com/css/css_margin.asp
-                                     
-                                     
+                             &nbsp;
+                             &nbsp;
+ 
                             April 2021, Ying Wu
                              '''),
                              style= {'marginTop': '20px'}
