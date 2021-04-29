@@ -1,24 +1,7 @@
 # -*- coding: utf-8 -*-
-"""
+'''
 Created on Mon Apr 26 21:55:34 2021
-
-@author: hatti
-"""
-
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Apr 22 17:30:28 2021
-
-@author: hatti
-"""
-
-"""
-Dashboard created in lecture Week 11
-"""
-
-"""
-Dash template
-"""
+'''
 
 import dash
 import dash_core_components as dcc
@@ -33,25 +16,11 @@ from calendar import monthrange
 
 stylesheet = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-# pandas dataframe to html table
-'''
-def generate_table(dataframe, max_rows=2000):
-    return html.Table([
-        html.Thead(
-            html.Tr([html.Th(col) for col in dataframe.columns])
-        ),
-        html.Tbody([
-            html.Tr([
-                html.Td(dataframe.iloc[i][col]) for col in dataframe.columns
-            ]) for i in range(min(len(dataframe), max_rows))
-        ])
-    ])
-'''
 app = dash.Dash(__name__, external_stylesheets=stylesheet)
 
 PAGE_SIZE =20
 
-df = pd.read_pickle('C:\\Users\\hatti\\Desktop\\ma705\\individual project\\covidproject.pkl')
+df = pd.read_pickle('covidproject.pkl')
 statelabels = [{'label' : state, 'value' : state} for state in set(df.State)]
 yLabels = [{'label' : col, 'value' : col} for col in df.columns[2:]]
 
@@ -173,10 +142,6 @@ app.layout = html.Div([
                      )
                  ],
     
-    
-    
-    
-    
     style={'marginRight': 50, 'marginLeft': 50},
     
   )
@@ -207,30 +172,3 @@ def update_fig_table(states,field):
 if __name__ == '__main__':
     app.run_server(debug=True)
     
-'''
-                            style_cell_conditional=[
-                                {
-                                    'if': {'column_id': c},
-                                    'textAlign': 'right'
-                                } for c in ['Date', 'State']
-                            ],
-                            style_data_conditional=[
-                                {
-                                    'if': {'row_index': 'odd'},
-                                    'backgroundColor': 'rgb(248, 248, 248)',
-                                    'if': {'column_id': 'Daily Vaccinations'},
-                                    'width': '5%',
-                                    'if': {'column_id': 'Daily Vaccinations/million'},
-                                    'width': '15%',
-                                    
-                                }
-                            ],
-        '''
-'''
-                             ###### About
-                             * Dash supports [Markdown](http://commonmark.org/help).
-                                 * Markdown is a simple way to write and format text
-                                 * It includes a syntax for things like **bold text** and *italics*,
-                             [links](http://commonmark.org/help), inline `code` snippets, lists,
-                             quotes, and more.
-                             '''
