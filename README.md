@@ -3,7 +3,7 @@
 This repository contains files used in the MA705 dashboard project: 
 "2021 Covid-19 Cases and Vaccinations in Most Populous States in the United States".
 
-The final dashboard is deployed on Heroku [here](https://ma705covid19dash.herokuapp.com).
+The final dashboard is deployed on Heroku [here](https://ma705covid19-project.herokuapp).com/)
 
 ## Dashboard Description
 
