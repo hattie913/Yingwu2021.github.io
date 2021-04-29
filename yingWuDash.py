@@ -26,24 +26,9 @@ yLabels = [{'label' : col, 'value' : col} for col in df.columns[2:]]
 
 df['Date'] = pd.to_datetime(df.Date).dt.date
 
-'''
-#get future one month later
-today = date.today()
-nextMd = date(today.year, today.month, monthrange(today.year, today.month)[1]) + timedelta(1)
-nextMon = nextMd.strftime('%Y-%m')
-dateRange = list(set([caseDT.strftime('%Y-%m')for caseDT in df.Date]))
-dateRange.append(nextMon)
-
-dates = sorted(dateRange)
-
-date_mark = {i : dates[i] for i in range(0,len(dates))}
-'''
-#numdate= [x for x in range(len(df['Date'].unique()))]
 cols = ['Date','State','Total Cases','New Case','New Death','Daily Vaccinations',
         'Daily Vaccinations/million']
-#df = df.set_index('Date', drop=True)
 
-#fig = px.scatter(df, x="Date", y='Daily Vaccinations', color='State')
 app.layout = html.Div([
     html.H1('2021 Covid-19 Cases and Vaccinations in Populous US States',style={'fontFamily':'Helvetica','textAlign' : 'center','marginTop': 30}),
 
@@ -70,12 +55,10 @@ app.layout = html.Div([
 }
           
              ),
-    #html.Div([dcc.Graph(id='ts_fig')],
     html.Div([dcc.Graph(id='ts_fig',figure = {'layout': {'height': 600
             }})],
              style = {'width': '75%','display': 'inline-block','paddingLeft':'30px','paddingTop':'20px'}),      
     html.Div([
-    #html.H5("Slider: "),
              dash_table.DataTable(
                             id='table-multicol-sorting',
                             columns=[
@@ -132,8 +115,6 @@ app.layout = html.Div([
                              - References on customizing dashboard layout and CSS style:
                                      * https://dash.plotly.com/dash-html-components
                                      * https://www.w3schools.com/css/css_margin.asp
-                                     
-                                     
                                      
                                      
                             April 2021, Ying Wu
