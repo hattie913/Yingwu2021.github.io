@@ -104,7 +104,7 @@ app.layout = html.Div([
             
        html.Div(dcc.Markdown('''
                              ###### **Note**
-                             - Data from this dashboard daily updates Covid-19 cases and vaccinations in 
+                             - Data from this dashboard daily updates the counts of Covid-19 cases and vaccinations in 
                              Massachusetts and the top 10 most populous states of the US
                              - The graph shows the trend of Covid-19 cases and new doses of vaccinations admistered per day since 
                              the vaccine started to deploy nationwide on 2021/1/12
@@ -112,7 +112,7 @@ app.layout = html.Div([
                              population of the state received each day 
                              - Primary data source: [CDC](https://covid.cdc.gov/covid-data-tracker/#cases_casesper100klast7days)
                              and [Our World in Data](https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations)
-                             - References on customizing dashboard layout and CSS style:
+                             - References on customizing dashboard layout and using CSS style:
                                      * https://dash.plotly.com/dash-html-components
                                      * https://www.w3schools.com/css/css_margin.asp
                              &nbsp;
