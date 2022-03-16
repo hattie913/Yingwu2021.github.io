@@ -30,7 +30,7 @@ cols = ['Date','State','Total Cases','New Case','New Death','Daily Vaccinations'
         'Daily Vaccinations/million']
 
 app.layout = html.Div([
-    html.H1('2021 Covid-19 Cases and Vaccinations in Populous US States',style={'fontFamily':'Helvetica','textAlign' : 'center','marginTop': 30}),
+    html.H1('realtime Covid-19 Cases and Vaccinations in Populous US States',style={'fontFamily':'Helvetica','textAlign' : 'center','marginTop': 30}),
 
     html.Div([html.Label("Select a State/States: ",style={'textAlign' : 'center','paddingBottom':15}),
               dcc.Dropdown(options=statelabels,placeholder="Select a state/states",
